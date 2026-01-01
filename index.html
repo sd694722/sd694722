@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sandip Dolai | Software Developer</title>
-  <meta name="description" content="Sandip Dolai – Backend-focused Software Developer with expertise in Django, DRF, ERP systems, and scalable SaaS platforms.">
+  <meta name="description"
+    content="Sandip Dolai – Backend-focused Software Developer with expertise in Django, DRF, ERP systems, and scalable SaaS platforms.">
 
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -29,45 +31,74 @@
   </script>
 
   <style>
-    section { min-height: 100vh; }
-    html { scroll-snap-type: y mandatory; }
-    section { scroll-snap-align: start; }
+    section {
+      min-height: 100vh;
+    }
+
+    html {
+      scroll-snap-type: y mandatory;
+    }
+
+    section {
+      scroll-snap-align: start;
+    }
+
+    .nav-link {
+      position: relative;
+      padding-bottom: 6px;
+    }
   </style>
+
 </head>
+
 <body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-300">
 
   <!-- Navbar -->
   <nav class="fixed top-0 w-full bg-white/90 dark:bg-gray-900/90 backdrop-blur-md shadow-md z-50">
     <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
       <a href="#home" class="text-2xl font-bold text-blue-600 dark:text-blue-400">Sandip Dolai</a>
-      <div class="hidden md:flex items-center space-x-8">
-        <a href="#home" class="font-medium hover:text-blue-600 dark:hover:text-blue-400 transition">Home</a>
-        <a href="#about" class="font-medium hover:text-blue-600 dark:hover:text-blue-400 transition">About</a>
-        <a href="#experience" class="font-medium hover:text-blue-600 dark:hover:text-blue-400 transition">Experience</a>
-        <a href="#projects" class="font-medium hover:text-blue-600 dark:hover:text-blue-400 transition">Projects</a>
-        <a href="#skills" class="font-medium hover:text-blue-600 dark:hover:text-blue-400 transition">Skills</a>
-        <a href="#education" class="font-medium hover:text-blue-600 dark:hover:text-blue-400 transition">Education</a>
-        <button id="themeToggle" class="p-2 rounded-lg bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 transition">
-          <i class="fas fa-moon text-lg"></i>
+      <div class="hidden md:flex items-center">
+        <div id="navMenu" class="relative flex items-center gap-8">
+          <a href="#home" class="nav-link font-medium hover:text-blue-600 dark:hover:text-blue-400 transition">Home</a>
+          <a href="#about"
+            class="nav-link font-medium hover:text-blue-600 dark:hover:text-blue-400 transition">About</a>
+          <a href="#experience"
+            class="nav-link font-medium hover:text-blue-600 dark:hover:text-blue-400 transition">Experience</a>
+          <a href="#projects"
+            class="nav-link font-medium hover:text-blue-600 dark:hover:text-blue-400 transition">Projects</a>
+          <a href="#skills"
+            class="nav-link font-medium hover:text-blue-600 dark:hover:text-blue-400 transition">Skills</a>
+          <a href="#education"
+            class="nav-link font-medium hover:text-blue-600 dark:hover:text-blue-400 transition">Education</a>
+
+          <!-- SLIDING UNDERLINE -->
+          <span id="navIndicator"
+            class="absolute bottom-0 h-[2px] bg-blue-600 dark:bg-blue-400 transition-all duration-300 ease-out"></span>
+
+          <button id="themeToggle"
+            class="p-2 rounded-lg bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 transition">
+            <i class="fas fa-moon text-lg"></i>
+          </button>
+
+        </div>
+
+        <button id="mobileMenuBtn" class="md:hidden text-2xl">
+          <i class="fas fa-bars"></i>
         </button>
       </div>
-      <button id="mobileMenuBtn" class="md:hidden text-2xl">
-        <i class="fas fa-bars"></i>
-      </button>
-    </div>
-    <div id="mobileMenu" class="hidden md:hidden bg-white dark:bg-gray-900 shadow-lg">
-      <div class="px-6 py-4 space-y-4 text-center">
-        <a href="#home" class="block font-medium hover:text-blue-600 dark:hover:text-blue-400">Home</a>
-        <a href="#about" class="block font-medium hover:text-blue-600 dark:hover:text-blue-400">About</a>
-        <a href="#experience" class="block font-medium hover:text-blue-600 dark:hover:text-blue-400">Experience</a>
-        <a href="#projects" class="block font-medium hover:text-blue-600 dark:hover:text-blue-400">Projects</a>
-        <a href="#skills" class="block font-medium hover:text-blue-600 dark:hover:text-blue-400">Skills</a>
-        <a href="#education" class="block font-medium hover:text-blue-600 dark:hover:text-blue-400">Education</a>
-        <button id="themeToggleMobile" class="p-2 rounded-lg bg-gray-200 dark:bg-gray-700 w-full">
-          <i class="fas fa-moon mr-2"></i> Toggle Theme
-        </button>
+      <div id="mobileMenu" class="hidden md:hidden bg-white dark:bg-gray-900 shadow-lg">
+        <div class="px-6 py-4 space-y-4 text-center">
+          <a href="#home" class="block font-medium hover:text-blue-600 dark:hover:text-blue-400">Home</a>
+          <a href="#about" class="block font-medium hover:text-blue-600 dark:hover:text-blue-400">About</a>
+          <a href="#experience" class="block font-medium hover:text-blue-600 dark:hover:text-blue-400">Experience</a>
+          <a href="#projects" class="block font-medium hover:text-blue-600 dark:hover:text-blue-400">Projects</a>
+          <a href="#skills" class="block font-medium hover:text-blue-600 dark:hover:text-blue-400">Skills</a>
+          <a href="#education" class="block font-medium hover:text-blue-600 dark:hover:text-blue-400">Education</a>
+          <button id="themeToggleMobile" class="p-2 rounded-lg bg-gray-200 dark:bg-gray-700 w-full">
+            <i class="fas fa-moon mr-2"></i> Toggle Theme
+          </button>
+        </div>
       </div>
-    </div>
   </nav>
 
   <!-- Hero -->
@@ -78,17 +109,22 @@
         <p class="text-2xl md:text-3xl mb-6">Software Developer</p>
         <p class="text-lg mb-8">+91 8167211803 | sandip1998dolai@gmail.com</p>
         <div class="flex justify-center lg:justify-start space-x-6 text-3xl mb-8">
-          <a href="https://www.linkedin.com/in/sandipdolai/" target="_blank" class="hover:text-blue-200 transition"><i class="fab fa-linkedin"></i></a>
-          <a href="https://github.com/sandip-dolai" target="_blank" class="hover:text-blue-200 transition"><i class="fab fa-github"></i></a>
-          <a href="https://www.sandipdolai.in" target="_blank" class="hover:text-blue-200 transition"><i class="fas fa-globe"></i></a>
+          <a href="https://www.linkedin.com/in/sandipdolai/" target="_blank" class="hover:text-blue-200 transition"><i
+              class="fab fa-linkedin"></i></a>
+          <a href="https://github.com/sandip-dolai" target="_blank" class="hover:text-blue-200 transition"><i
+              class="fab fa-github"></i></a>
+          <a href="https://www.sandipdolai.in" target="_blank" class="hover:text-blue-200 transition"><i
+              class="fas fa-globe"></i></a>
         </div>
-        <a href="https://drive.google.com/uc?export=download&id=1Jz0ruYNwAV8-wl34d_ROX6EhTNwFbu_Z" class="inline-block px-8 py-3 bg-white text-blue-600 font-semibold rounded-lg shadow-lg hover:bg-gray-100 transition">
+        <a href="https://drive.google.com/uc?export=download&id=1Jz0ruYNwAV8-wl34d_ROX6EhTNwFbu_Z"
+          class="inline-block px-8 py-3 bg-white text-blue-600 font-semibold rounded-lg shadow-lg hover:bg-gray-100 transition">
           Download Resume
         </a>
       </div>
       <div class="flex justify-center">
         <!-- Tilt on profile photo -->
-        <div data-tilt data-tilt-glare data-tilt-max-glare="0.5" data-tilt-max="15" data-tilt-speed="400" class="rounded-full overflow-hidden shadow-2xl">
+        <div data-tilt data-tilt-glare data-tilt-max-glare="0.5" data-tilt-max="15" data-tilt-speed="400"
+          class="rounded-full overflow-hidden shadow-2xl">
           <img src="sandip.jpg" alt="Sandip Dolai" class="w-80 h-80 object-cover">
         </div>
       </div>
@@ -100,7 +136,11 @@
     <div class="max-w-4xl mx-auto px-6">
       <h2 class="text-4xl font-bold text-center mb-12">Professional Summary</h2>
       <p class="text-lg leading-relaxed text-gray-700 dark:text-gray-300">
-        Software Developer with ~2 years of production experience building scalable ERP and SaaS platforms. Strong expertise in Django, Django REST Framework, REST API design, role-based access control, and database optimization using MySQL and PostgreSQL. Experienced in direct client collaboration, requirement analysis, and guiding users on system usage. Proven ability to deploy and maintain applications on Ubuntu VPS with Nginx supporting real business workflows and 100+ daily users.
+        Software Developer with ~2 years of production experience building scalable ERP and SaaS platforms. Strong
+        expertise in Django, Django REST Framework, REST API design, role-based access control, and database
+        optimization using MySQL and PostgreSQL. Experienced in direct client collaboration, requirement analysis, and
+        guiding users on system usage. Proven ability to deploy and maintain applications on Ubuntu VPS with Nginx
+        supporting real business workflows and 100+ daily users.
       </p>
     </div>
   </section>
@@ -110,16 +150,26 @@
     <div class="max-w-5xl mx-auto px-6">
       <h2 class="text-4xl font-bold text-center mb-12">Professional Experience</h2>
       <!-- Tilt on experience card -->
-      <div data-tilt data-tilt-glare data-tilt-max-glare="0.3" data-tilt-max="10" data-tilt-speed="500" class="bg-gray-50 dark:bg-gray-800 rounded-xl shadow-lg p-8">
+      <div data-tilt data-tilt-glare data-tilt-max-glare="0.3" data-tilt-max="10" data-tilt-speed="500"
+        class="bg-gray-50 dark:bg-gray-800 rounded-xl shadow-lg p-8">
         <h3 class="text-2xl font-bold mb-2">Software Developer</h3>
         <p class="text-lg text-blue-600 dark:text-blue-400 mb-6">SKC Infotech | Kolkata, WB | Feb 2024 – Present</p>
         <ul class="space-y-4 text-base text-gray-700 dark:text-gray-300">
-          <li class="flex items-start"><span class="mr-3 mt-1 text-blue-600">•</span> Developed and maintained Django-based ERP modules (Inventory, HR, Sales, CRM) using Django, Django REST Framework, and MySQL, supporting 100+ daily active users.</li>
-          <li class="flex items-start"><span class="mr-3 mt-1 text-blue-600">•</span> Designed and optimized RESTful APIs in Django REST Framework, improving data retrieval performance by ~25% through query optimization and efficient endpoint design.</li>
-          <li class="flex items-start"><span class="mr-3 mt-1 text-blue-600">•</span> Implemented role-based access control (RBAC) and permission workflows in Django for multi-department approval processes.</li>
-          <li class="flex items-start"><span class="mr-3 mt-1 text-blue-600">•</span> Delivered 14+ production ERP systems using Django, PHP, MySQL, and REST APIs, handling 500+ monthly business transactions.</li>
-          <li class="flex items-start"><span class="mr-3 mt-1 text-blue-600">•</span> Collaborated directly with clients for requirements gathering, workflow design, demos, and user guidance, ensuring smooth system adoption.</li>
-          <li class="flex items-start"><span class="mr-3 mt-1 text-blue-600">•</span> Deployed and maintained Django applications on Ubuntu VPS with Nginx (99.9% uptime) and mentored junior developers, reducing post-release bugs by ~15%.</li>
+          <li class="flex items-start"><span class="mr-3 mt-1 text-blue-600">•</span> Developed and maintained
+            Django-based ERP modules (Inventory, HR, Sales, CRM) using Django, Django REST Framework, and MySQL,
+            supporting 100+ daily active users.</li>
+          <li class="flex items-start"><span class="mr-3 mt-1 text-blue-600">•</span> Designed and optimized RESTful
+            APIs in Django REST Framework, improving data retrieval performance by ~25% through query optimization and
+            efficient endpoint design.</li>
+          <li class="flex items-start"><span class="mr-3 mt-1 text-blue-600">•</span> Implemented role-based access
+            control (RBAC) and permission workflows in Django for multi-department approval processes.</li>
+          <li class="flex items-start"><span class="mr-3 mt-1 text-blue-600">•</span> Delivered 14+ production ERP
+            systems using Django, PHP, MySQL, and REST APIs, handling 500+ monthly business transactions.</li>
+          <li class="flex items-start"><span class="mr-3 mt-1 text-blue-600">•</span> Collaborated directly with clients
+            for requirements gathering, workflow design, demos, and user guidance, ensuring smooth system adoption.</li>
+          <li class="flex items-start"><span class="mr-3 mt-1 text-blue-600">•</span> Deployed and maintained Django
+            applications on Ubuntu VPS with Nginx (99.9% uptime) and mentored junior developers, reducing post-release
+            bugs by ~15%.</li>
         </ul>
       </div>
     </div>
@@ -130,16 +180,27 @@
     <div class="max-w-5xl mx-auto px-6">
       <h2 class="text-4xl font-bold text-center mb-12">Personal Project</h2>
       <!-- Tilt on project card -->
-      <div data-tilt data-tilt-glare data-tilt-max-glare="0.3" data-tilt-max="10" data-tilt-speed="500" class="bg-white dark:bg-gray-900 rounded-xl shadow-lg p-8">
+      <div data-tilt data-tilt-glare data-tilt-max-glare="0.3" data-tilt-max="10" data-tilt-speed="500"
+        class="bg-white dark:bg-gray-900 rounded-xl shadow-lg p-8">
         <h3 class="text-2xl font-bold mb-2">Research Collaboration and Community Platform</h3>
-        <p class="text-lg mb-6"><a href="https://github.com/sandip-dolai/research_paltform" target="_blank" class="text-blue-600 dark:text-blue-400 hover:underline">GitHub: github.com/sandip-dolai/research_paltform</a></p>
+        <p class="text-lg mb-6"><a href="https://github.com/sandip-dolai/research_paltform" target="_blank"
+            class="text-blue-600 dark:text-blue-400 hover:underline">GitHub:
+            github.com/sandip-dolai/research_paltform</a></p>
         <ul class="space-y-4 text-base text-gray-700 dark:text-gray-300">
-          <li class="flex items-start"><span class="mr-3 mt-1 text-blue-600">•</span> Built a multi-role SaaS platform using Django and Django REST Framework, integrating community posts, subscriptions, expert bookings, and messaging.</li>
-          <li class="flex items-start"><span class="mr-3 mt-1 text-blue-600">•</span> Designed and implemented secure role-based access control (RBAC) for Guest, Registered, Premium, Expert, Investor, Entrepreneur, and Admin users.</li>
-          <li class="flex items-start"><span class="mr-3 mt-1 text-blue-600">•</span> Developed REST APIs for user management, posts, comments, subscriptions, bookings, and messaging workflows.</li>
-          <li class="flex items-start"><span class="mr-3 mt-1 text-blue-600">•</span> Implemented real-time chat using WebSockets, linked to expert advisory booking sessions.</li>
-          <li class="flex items-start"><span class="mr-3 mt-1 text-blue-600">•</span> Optimized MySQL queries with pagination and filtering to handle large datasets with consistent performance.</li>
-          <li class="flex items-start"><span class="mr-3 mt-1 text-blue-600">•</span> Deployed and maintained the application on Ubuntu VPS with Nginx for production-like usage.</li>
+          <li class="flex items-start"><span class="mr-3 mt-1 text-blue-600">•</span> Built a multi-role SaaS platform
+            using Django and Django REST Framework, integrating community posts, subscriptions, expert bookings, and
+            messaging.</li>
+          <li class="flex items-start"><span class="mr-3 mt-1 text-blue-600">•</span> Designed and implemented secure
+            role-based access control (RBAC) for Guest, Registered, Premium, Expert, Investor, Entrepreneur, and Admin
+            users.</li>
+          <li class="flex items-start"><span class="mr-3 mt-1 text-blue-600">•</span> Developed REST APIs for user
+            management, posts, comments, subscriptions, bookings, and messaging workflows.</li>
+          <li class="flex items-start"><span class="mr-3 mt-1 text-blue-600">•</span> Implemented real-time chat using
+            WebSockets, linked to expert advisory booking sessions.</li>
+          <li class="flex items-start"><span class="mr-3 mt-1 text-blue-600">•</span> Optimized MySQL queries with
+            pagination and filtering to handle large datasets with consistent performance.</li>
+          <li class="flex items-start"><span class="mr-3 mt-1 text-blue-600">•</span> Deployed and maintained the
+            application on Ubuntu VPS with Nginx for production-like usage.</li>
         </ul>
       </div>
     </div>
@@ -151,35 +212,67 @@
       <h2 class="text-4xl font-bold text-center mb-12">Technical Skills</h2>
       <div class="flex flex-wrap justify-center gap-4 max-w-5xl mx-auto">
         <!-- Tilt on each skill badge -->
-        <span data-tilt data-tilt-max="15" data-tilt-speed="400" data-tilt-scale="1.1" class="inline-flex items-center rounded-md bg-gray-100 dark:bg-gray-800 px-4 py-2 text-sm font-medium text-gray-800 dark:text-gray-200 ring-1 ring-inset ring-gray-300 dark:ring-gray-700">Python</span>
-        <span data-tilt data-tilt-max="15" data-tilt-speed="400" data-tilt-scale="1.1" class="inline-flex items-center rounded-md bg-gray-100 dark:bg-gray-800 px-4 py-2 text-sm font-medium text-gray-800 dark:text-gray-200 ring-1 ring-inset ring-gray-300 dark:ring-gray-700">PHP</span>
-        <span data-tilt data-tilt-max="15" data-tilt-speed="400" data-tilt-scale="1.1" class="inline-flex items-center rounded-md bg-gray-100 dark:bg-gray-800 px-4 py-2 text-sm font-medium text-gray-800 dark:text-gray-200 ring-1 ring-inset ring-gray-300 dark:ring-gray-700">JavaScript</span>
-        <span data-tilt data-tilt-max="15" data-tilt-speed="400" data-tilt-scale="1.1" class="inline-flex items-center rounded-md bg-gray-100 dark:bg-gray-800 px-4 py-2 text-sm font-medium text-gray-800 dark:text-gray-200 ring-1 ring-inset ring-gray-300 dark:ring-gray-700">SQL</span>
-        <span data-tilt data-tilt-max="15" data-tilt-speed="400" data-tilt-scale="1.1" class="inline-flex items-center rounded-md bg-indigo-100 dark:bg-indigo-900 px-4 py-2 text-sm font-medium text-indigo-800 dark:text-indigo-200 ring-1 ring-inset ring-indigo-300 dark:ring-indigo-800">Django</span>
-        <span data-tilt data-tilt-max="15" data-tilt-speed="400" data-tilt-scale="1.1" class="inline-flex items-center rounded-md bg-indigo-100 dark:bg-indigo-900 px-4 py-2 text-sm font-medium text-indigo-800 dark:text-indigo-200 ring-1 ring-inset ring-indigo-300 dark:ring-indigo-800">Django REST Framework (DRF)</span>
-        <span data-tilt data-tilt-max="15" data-tilt-speed="400" data-tilt-scale="1.1" class="inline-flex items-center rounded-md bg-blue-100 dark:bg-blue-900 px-4 py-2 text-sm font-medium text-blue-800 dark:text-blue-200 ring-1 ring-inset ring-blue-300 dark:ring-blue-800">HTML</span>
-        <span data-tilt data-tilt-max="15" data-tilt-speed="400" data-tilt-scale="1.1" class="inline-flex items-center rounded-md bg-blue-100 dark:bg-blue-900 px-4 py-2 text-sm font-medium text-blue-800 dark:text-blue-200 ring-1 ring-inset ring-blue-300 dark:ring-blue-800">CSS</span>
-        <span data-tilt data-tilt-max="15" data-tilt-speed="400" data-tilt-scale="1.1" class="inline-flex items-center rounded-md bg-blue-100 dark:bg-blue-900 px-4 py-2 text-sm font-medium text-blue-800 dark:text-blue-200 ring-1 ring-inset ring-blue-300 dark:ring-blue-800">Bootstrap</span>
-        <span data-tilt data-tilt-max="15" data-tilt-speed="400" data-tilt-scale="1.1" class="inline-flex items-center rounded-md bg-blue-100 dark:bg-blue-900 px-4 py-2 text-sm font-medium text-blue-800 dark:text-blue-200 ring-1 ring-inset ring-blue-300 dark:ring-blue-800">jQuery</span>
-        <span data-tilt data-tilt-max="15" data-tilt-speed="400" data-tilt-scale="1.1" class="inline-flex items-center rounded-md bg-blue-100 dark:bg-blue-900 px-4 py-2 text-sm font-medium text-blue-800 dark:text-blue-200 ring-1 ring-inset ring-blue-300 dark:ring-blue-800">AJAX</span>
-        <span data-tilt data-tilt-max="15" data-tilt-speed="400" data-tilt-scale="1.1" class="inline-flex items-center rounded-md bg-teal-100 dark:bg-teal-900 px-4 py-2 text-sm font-medium text-teal-800 dark:text-teal-200 ring-1 ring-inset ring-teal-300 dark:ring-teal-800">MySQL</span>
-        <span data-tilt data-tilt-max="15" data-tilt-speed="400" data-tilt-scale="1.1" class="inline-flex items-center rounded-md bg-teal-100 dark:bg-teal-900 px-4 py-2 text-sm font-medium text-teal-800 dark:text-teal-200 ring-1 ring-inset ring-teal-300 dark:ring-teal-800">PostgreSQL</span>
-        <span data-tilt data-tilt-max="15" data-tilt-speed="400" data-tilt-scale="1.1" class="inline-flex items-center rounded-md bg-gray-200 dark:bg-gray-700 px-4 py-2 text-sm font-medium text-gray-800 dark:text-gray-300 ring-1 ring-inset ring-gray-400 dark:ring-gray-600">Ubuntu VPS</span>
-        <span data-tilt data-tilt-max="15" data-tilt-speed="400" data-tilt-scale="1.1" class="inline-flex items-center rounded-md bg-gray-200 dark:bg-gray-700 px-4 py-2 text-sm font-medium text-gray-800 dark:text-gray-300 ring-1 ring-inset ring-gray-400 dark:ring-gray-600">Nginx</span>
-        <span data-tilt data-tilt-max="15" data-tilt-speed="400" data-tilt-scale="1.1" class="inline-flex items-center rounded-md bg-gray-200 dark:bg-gray-700 px-4 py-2 text-sm font-medium text-gray-800 dark:text-gray-300 ring-1 ring-inset ring-gray-400 dark:ring-gray-600">GitHub</span>
-        <span data-tilt data-tilt-max="15" data-tilt-speed="400" data-tilt-scale="1.1" class="inline-flex items-center rounded-md bg-gray-200 dark:bg-gray-700 px-4 py-2 text-sm font-medium text-gray-800 dark:text-gray-300 ring-1 ring-inset ring-gray-400 dark:ring-gray-600">Virtualenv</span>
-        <span data-tilt data-tilt-max="15" data-tilt-speed="400" data-tilt-scale="1.1" class="inline-flex items-center rounded-md bg-purple-100 dark:bg-purple-900 px-4 py-2 text-sm font-medium text-purple-800 dark:text-purple-200 ring-1 ring-inset ring-purple-300 dark:ring-purple-800">REST API Design</span>
-        <span data-tilt data-tilt-max="15" data-tilt-speed="400" data-tilt-scale="1.1" class="inline-flex items-center rounded-md bg-purple-100 dark:bg-purple-900 px-4 py-2 text-sm font-medium text-purple-800 dark:text-purple-200 ring-1 ring-inset ring-purple-300 dark:ring-purple-800">JWT Authentication</span>
-        <span data-tilt data-tilt-max="15" data-tilt-speed="400" data-tilt-scale="1.1" class="inline-flex items-center rounded-md bg-purple-100 dark:bg-purple-900 px-4 py-2 text-sm font-medium text-purple-800 dark:text-purple-200 ring-1 ring-inset ring-purple-300 dark:ring-purple-800">RBAC</span>
-        <span data-tilt data-tilt-max="15" data-tilt-speed="400" data-tilt-scale="1.1" class="inline-flex items-center rounded-md bg-purple-100 dark:bg-purple-900 px-4 py-2 text-sm font-medium text-purple-800 dark:text-purple-200 ring-1 ring-inset ring-purple-300 dark:ring-purple-800">Pagination</span>
-        <span data-tilt data-tilt-max="15" data-tilt-speed="400" data-tilt-scale="1.1" class="inline-flex items-center rounded-md bg-purple-100 dark:bg-purple-900 px-4 py-2 text-sm font-medium text-purple-800 dark:text-purple-200 ring-1 ring-inset ring-purple-300 dark:ring-purple-800">Filtering</span>
-        <span data-tilt data-tilt-max="15" data-tilt-speed="400" data-tilt-scale="1.1" class="inline-flex items-center rounded-md bg-orange-100 dark:bg-orange-900 px-4 py-2 text-sm font-medium text-orange-800 dark:text-orange-200 ring-1 ring-inset ring-orange-300 dark:ring-orange-800">ERP Systems</span>
-        <span data-tilt data-tilt-max="15" data-tilt-speed="400" data-tilt-scale="1.1" class="inline-flex items-center rounded-md bg-orange-100 dark:bg-orange-900 px-4 py-2 text-sm font-medium text-orange-800 dark:text-orange-200 ring-1 ring-inset ring-orange-300 dark:ring-orange-800">PDF & DOC Generation</span>
+        <span data-tilt data-tilt-max="15" data-tilt-speed="400" data-tilt-scale="1.1"
+          class="inline-flex items-center rounded-md bg-gray-100 dark:bg-gray-800 px-4 py-2 text-sm font-medium text-gray-800 dark:text-gray-200 ring-1 ring-inset ring-gray-300 dark:ring-gray-700">Python</span>
+        <span data-tilt data-tilt-max="15" data-tilt-speed="400" data-tilt-scale="1.1"
+          class="inline-flex items-center rounded-md bg-gray-100 dark:bg-gray-800 px-4 py-2 text-sm font-medium text-gray-800 dark:text-gray-200 ring-1 ring-inset ring-gray-300 dark:ring-gray-700">PHP</span>
+        <span data-tilt data-tilt-max="15" data-tilt-speed="400" data-tilt-scale="1.1"
+          class="inline-flex items-center rounded-md bg-gray-100 dark:bg-gray-800 px-4 py-2 text-sm font-medium text-gray-800 dark:text-gray-200 ring-1 ring-inset ring-gray-300 dark:ring-gray-700">JavaScript</span>
+        <span data-tilt data-tilt-max="15" data-tilt-speed="400" data-tilt-scale="1.1"
+          class="inline-flex items-center rounded-md bg-gray-100 dark:bg-gray-800 px-4 py-2 text-sm font-medium text-gray-800 dark:text-gray-200 ring-1 ring-inset ring-gray-300 dark:ring-gray-700">SQL</span>
+        <span data-tilt data-tilt-max="15" data-tilt-speed="400" data-tilt-scale="1.1"
+          class="inline-flex items-center rounded-md bg-indigo-100 dark:bg-indigo-900 px-4 py-2 text-sm font-medium text-indigo-800 dark:text-indigo-200 ring-1 ring-inset ring-indigo-300 dark:ring-indigo-800">Django</span>
+        <span data-tilt data-tilt-max="15" data-tilt-speed="400" data-tilt-scale="1.1"
+          class="inline-flex items-center rounded-md bg-indigo-100 dark:bg-indigo-900 px-4 py-2 text-sm font-medium text-indigo-800 dark:text-indigo-200 ring-1 ring-inset ring-indigo-300 dark:ring-indigo-800">Django
+          REST Framework (DRF)</span>
+        <span data-tilt data-tilt-max="15" data-tilt-speed="400" data-tilt-scale="1.1"
+          class="inline-flex items-center rounded-md bg-blue-100 dark:bg-blue-900 px-4 py-2 text-sm font-medium text-blue-800 dark:text-blue-200 ring-1 ring-inset ring-blue-300 dark:ring-blue-800">HTML</span>
+        <span data-tilt data-tilt-max="15" data-tilt-speed="400" data-tilt-scale="1.1"
+          class="inline-flex items-center rounded-md bg-blue-100 dark:bg-blue-900 px-4 py-2 text-sm font-medium text-blue-800 dark:text-blue-200 ring-1 ring-inset ring-blue-300 dark:ring-blue-800">CSS</span>
+        <span data-tilt data-tilt-max="15" data-tilt-speed="400" data-tilt-scale="1.1"
+          class="inline-flex items-center rounded-md bg-blue-100 dark:bg-blue-900 px-4 py-2 text-sm font-medium text-blue-800 dark:text-blue-200 ring-1 ring-inset ring-blue-300 dark:ring-blue-800">Bootstrap</span>
+        <span data-tilt data-tilt-max="15" data-tilt-speed="400" data-tilt-scale="1.1"
+          class="inline-flex items-center rounded-md bg-blue-100 dark:bg-blue-900 px-4 py-2 text-sm font-medium text-blue-800 dark:text-blue-200 ring-1 ring-inset ring-blue-300 dark:ring-blue-800">jQuery</span>
+        <span data-tilt data-tilt-max="15" data-tilt-speed="400" data-tilt-scale="1.1"
+          class="inline-flex items-center rounded-md bg-blue-100 dark:bg-blue-900 px-4 py-2 text-sm font-medium text-blue-800 dark:text-blue-200 ring-1 ring-inset ring-blue-300 dark:ring-blue-800">AJAX</span>
+        <span data-tilt data-tilt-max="15" data-tilt-speed="400" data-tilt-scale="1.1"
+          class="inline-flex items-center rounded-md bg-teal-100 dark:bg-teal-900 px-4 py-2 text-sm font-medium text-teal-800 dark:text-teal-200 ring-1 ring-inset ring-teal-300 dark:ring-teal-800">MySQL</span>
+        <span data-tilt data-tilt-max="15" data-tilt-speed="400" data-tilt-scale="1.1"
+          class="inline-flex items-center rounded-md bg-teal-100 dark:bg-teal-900 px-4 py-2 text-sm font-medium text-teal-800 dark:text-teal-200 ring-1 ring-inset ring-teal-300 dark:ring-teal-800">PostgreSQL</span>
+        <span data-tilt data-tilt-max="15" data-tilt-speed="400" data-tilt-scale="1.1"
+          class="inline-flex items-center rounded-md bg-gray-200 dark:bg-gray-700 px-4 py-2 text-sm font-medium text-gray-800 dark:text-gray-300 ring-1 ring-inset ring-gray-400 dark:ring-gray-600">Ubuntu
+          VPS</span>
+        <span data-tilt data-tilt-max="15" data-tilt-speed="400" data-tilt-scale="1.1"
+          class="inline-flex items-center rounded-md bg-gray-200 dark:bg-gray-700 px-4 py-2 text-sm font-medium text-gray-800 dark:text-gray-300 ring-1 ring-inset ring-gray-400 dark:ring-gray-600">Nginx</span>
+        <span data-tilt data-tilt-max="15" data-tilt-speed="400" data-tilt-scale="1.1"
+          class="inline-flex items-center rounded-md bg-gray-200 dark:bg-gray-700 px-4 py-2 text-sm font-medium text-gray-800 dark:text-gray-300 ring-1 ring-inset ring-gray-400 dark:ring-gray-600">GitHub</span>
+        <span data-tilt data-tilt-max="15" data-tilt-speed="400" data-tilt-scale="1.1"
+          class="inline-flex items-center rounded-md bg-gray-200 dark:bg-gray-700 px-4 py-2 text-sm font-medium text-gray-800 dark:text-gray-300 ring-1 ring-inset ring-gray-400 dark:ring-gray-600">Virtualenv</span>
+        <span data-tilt data-tilt-max="15" data-tilt-speed="400" data-tilt-scale="1.1"
+          class="inline-flex items-center rounded-md bg-purple-100 dark:bg-purple-900 px-4 py-2 text-sm font-medium text-purple-800 dark:text-purple-200 ring-1 ring-inset ring-purple-300 dark:ring-purple-800">REST
+          API Design</span>
+        <span data-tilt data-tilt-max="15" data-tilt-speed="400" data-tilt-scale="1.1"
+          class="inline-flex items-center rounded-md bg-purple-100 dark:bg-purple-900 px-4 py-2 text-sm font-medium text-purple-800 dark:text-purple-200 ring-1 ring-inset ring-purple-300 dark:ring-purple-800">JWT
+          Authentication</span>
+        <span data-tilt data-tilt-max="15" data-tilt-speed="400" data-tilt-scale="1.1"
+          class="inline-flex items-center rounded-md bg-purple-100 dark:bg-purple-900 px-4 py-2 text-sm font-medium text-purple-800 dark:text-purple-200 ring-1 ring-inset ring-purple-300 dark:ring-purple-800">RBAC</span>
+        <span data-tilt data-tilt-max="15" data-tilt-speed="400" data-tilt-scale="1.1"
+          class="inline-flex items-center rounded-md bg-purple-100 dark:bg-purple-900 px-4 py-2 text-sm font-medium text-purple-800 dark:text-purple-200 ring-1 ring-inset ring-purple-300 dark:ring-purple-800">Pagination</span>
+        <span data-tilt data-tilt-max="15" data-tilt-speed="400" data-tilt-scale="1.1"
+          class="inline-flex items-center rounded-md bg-purple-100 dark:bg-purple-900 px-4 py-2 text-sm font-medium text-purple-800 dark:text-purple-200 ring-1 ring-inset ring-purple-300 dark:ring-purple-800">Filtering</span>
+        <span data-tilt data-tilt-max="15" data-tilt-speed="400" data-tilt-scale="1.1"
+          class="inline-flex items-center rounded-md bg-orange-100 dark:bg-orange-900 px-4 py-2 text-sm font-medium text-orange-800 dark:text-orange-200 ring-1 ring-inset ring-orange-300 dark:ring-orange-800">ERP
+          Systems</span>
+        <span data-tilt data-tilt-max="15" data-tilt-speed="400" data-tilt-scale="1.1"
+          class="inline-flex items-center rounded-md bg-orange-100 dark:bg-orange-900 px-4 py-2 text-sm font-medium text-orange-800 dark:text-orange-200 ring-1 ring-inset ring-orange-300 dark:ring-orange-800">PDF
+          & DOC Generation</span>
       </div>
       <!-- Official Logos -->
       <div class="flex justify-center space-x-12 mt-12">
-        <img src="https://1000logos.net/wp-content/uploads/2020/08/Django-Logo.png" alt="Django Logo" class="h-16 opacity-90">
-        <img src="https://logos-world.net/wp-content/uploads/2021/10/Python-Emblem.png" alt="Python Logo" class="h-16 opacity-90">
+        <img src="https://1000logos.net/wp-content/uploads/2020/08/Django-Logo.png" alt="Django Logo"
+          class="h-16 opacity-90">
+        <img src="https://logos-world.net/wp-content/uploads/2021/10/Python-Emblem.png" alt="Python Logo"
+          class="h-16 opacity-90">
       </div>
     </div>
   </section>
@@ -202,453 +295,453 @@
   <!-- Embedded Vanilla Tilt.js Code -->
   <script>
     var VanillaTilt = (function () {
-    'use strict';
+      'use strict';
 
-    /**
-     * Created by Sergiu Șandor (micku7zu) on 1/27/2017.
-     * Original idea: https://github.com/gijsroge/tilt.js
-     * MIT License.
-     * Version 1.8.1
-     */
+      /**
+       * Created by Sergiu Șandor (micku7zu) on 1/27/2017.
+       * Original idea: https://github.com/gijsroge/tilt.js
+       * MIT License.
+       * Version 1.8.1
+       */
 
-    class VanillaTilt {
-      constructor(element, settings = {}) {
-        if (!(element instanceof Node)) {
-          throw ("Can't initialize VanillaTilt because " + element + " is not a Node.");
+      class VanillaTilt {
+        constructor(element, settings = {}) {
+          if (!(element instanceof Node)) {
+            throw ("Can't initialize VanillaTilt because " + element + " is not a Node.");
+          }
+
+          this.width = null;
+          this.height = null;
+          this.clientWidth = null;
+          this.clientHeight = null;
+          this.left = null;
+          this.top = null;
+
+          // for Gyroscope sampling
+          this.gammazero = null;
+          this.betazero = null;
+          this.lastgammazero = null;
+          this.lastbetazero = null;
+
+          this.transitionTimeout = null;
+          this.updateCall = null;
+          this.event = null;
+
+          this.updateBind = this.update.bind(this);
+          this.resetBind = this.reset.bind(this);
+
+          this.element = element;
+          this.settings = this.extendSettings(settings);
+
+          this.reverse = this.settings.reverse ? -1 : 1;
+          this.resetToStart = VanillaTilt.isSettingTrue(this.settings["reset-to-start"]);
+          this.glare = VanillaTilt.isSettingTrue(this.settings.glare);
+          this.glarePrerender = VanillaTilt.isSettingTrue(this.settings["glare-prerender"]);
+          this.fullPageListening = VanillaTilt.isSettingTrue(this.settings["full-page-listening"]);
+          this.gyroscope = VanillaTilt.isSettingTrue(this.settings.gyroscope);
+          this.gyroscopeSamples = this.settings.gyroscopeSamples;
+
+          this.elementListener = this.getElementListener();
+
+          if (this.glare) {
+            this.prepareGlare();
+          }
+
+          if (this.fullPageListening) {
+            this.updateClientSize();
+          }
+
+          this.addEventListeners();
+          this.reset();
+
+          if (this.resetToStart === false) {
+            this.settings.startX = 0;
+            this.settings.startY = 0;
+          }
         }
 
-        this.width = null;
-        this.height = null;
-        this.clientWidth = null;
-        this.clientHeight = null;
-        this.left = null;
-        this.top = null;
-
-        // for Gyroscope sampling
-        this.gammazero = null;
-        this.betazero = null;
-        this.lastgammazero = null;
-        this.lastbetazero = null;
-
-        this.transitionTimeout = null;
-        this.updateCall = null;
-        this.event = null;
-
-        this.updateBind = this.update.bind(this);
-        this.resetBind = this.reset.bind(this);
-
-        this.element = element;
-        this.settings = this.extendSettings(settings);
-
-        this.reverse = this.settings.reverse ? -1 : 1;
-        this.resetToStart = VanillaTilt.isSettingTrue(this.settings["reset-to-start"]);
-        this.glare = VanillaTilt.isSettingTrue(this.settings.glare);
-        this.glarePrerender = VanillaTilt.isSettingTrue(this.settings["glare-prerender"]);
-        this.fullPageListening = VanillaTilt.isSettingTrue(this.settings["full-page-listening"]);
-        this.gyroscope = VanillaTilt.isSettingTrue(this.settings.gyroscope);
-        this.gyroscopeSamples = this.settings.gyroscopeSamples;
-
-        this.elementListener = this.getElementListener();
-
-        if (this.glare) {
-          this.prepareGlare();
+        static isSettingTrue(setting) {
+          return setting === "" || setting === true || setting === 1;
         }
 
-        if (this.fullPageListening) {
+        getElementListener() {
+          if (this.fullPageListening) {
+            return window.document;
+          }
+
+          if (typeof this.settings["mouse-event-element"] === "string") {
+            const mouseEventElement = document.querySelector(this.settings["mouse-event-element"]);
+
+            if (mouseEventElement) {
+              return mouseEventElement;
+            }
+          }
+
+          if (this.settings["mouse-event-element"] instanceof Node) {
+            return this.settings["mouse-event-element"];
+          }
+
+          return this.element;
+        }
+
+        addEventListeners() {
+          this.onMouseEnterBind = this.onMouseEnter.bind(this);
+          this.onMouseMoveBind = this.onMouseMove.bind(this);
+          this.onMouseLeaveBind = this.onMouseLeave.bind(this);
+          this.onWindowResizeBind = this.onWindowResize.bind(this);
+          this.onDeviceOrientationBind = this.onDeviceOrientation.bind(this);
+
+          this.elementListener.addEventListener("mouseenter", this.onMouseEnterBind);
+          this.elementListener.addEventListener("mouseleave", this.onMouseLeaveBind);
+          this.elementListener.addEventListener("mousemove", this.onMouseMoveBind);
+
+          if (this.glare || this.fullPageListening) {
+            window.addEventListener("resize", this.onWindowResizeBind);
+          }
+
+          if (this.gyroscope) {
+            window.addEventListener("deviceorientation", this.onDeviceOrientationBind);
+          }
+        }
+
+        removeEventListeners() {
+          this.elementListener.removeEventListener("mouseenter", this.onMouseEnterBind);
+          this.elementListener.removeEventListener("mouseleave", this.onMouseLeaveBind);
+          this.elementListener.removeEventListener("mousemove", this.onMouseMoveBind);
+
+          if (this.gyroscope) {
+            window.removeEventListener("deviceorientation", this.onDeviceOrientationBind);
+          }
+
+          if (this.glare || this.fullPageListening) {
+            window.removeEventListener("resize", this.onWindowResizeBind);
+          }
+        }
+
+        destroy() {
+          clearTimeout(this.transitionTimeout);
+          if (this.updateCall !== null) {
+            cancelAnimationFrame(this.updateCall);
+          }
+
+          this.element.style.willChange = "";
+          this.element.style.transition = "";
+          this.element.style.transform = "";
+          this.resetGlare();
+
+          this.removeEventListeners();
+          this.element.vanillaTilt = null;
+          delete this.element.vanillaTilt;
+
+          this.element = null;
+        }
+
+        onDeviceOrientation(event) {
+          if (event.gamma === null || event.beta === null) {
+            return;
+          }
+
+          this.updateElementPosition();
+
+          if (this.gyroscopeSamples > 0) {
+            this.lastgammazero = this.gammazero;
+            this.lastbetazero = this.betazero;
+
+            if (this.gammazero === null) {
+              this.gammazero = event.gamma;
+              this.betazero = event.beta;
+            } else {
+              this.gammazero = (event.gamma + this.lastgammazero) / 2;
+              this.betazero = (event.beta + this.lastbetazero) / 2;
+            }
+
+            this.gyroscopeSamples -= 1;
+          }
+
+          const totalAngleX = this.settings.gyroscopeMaxAngleX - this.settings.gyroscopeMinAngleX;
+          const totalAngleY = this.settings.gyroscopeMaxAngleY - this.settings.gyroscopeMinAngleY;
+
+          const degreesPerPixelX = totalAngleX / this.width;
+          const degreesPerPixelY = totalAngleY / this.height;
+
+          const angleX = event.gamma - (this.settings.gyroscopeMinAngleX + this.gammazero);
+          const angleY = event.beta - (this.settings.gyroscopeMinAngleY + this.betazero);
+
+          const posX = angleX / degreesPerPixelX;
+          const posY = angleY / degreesPerPixelY;
+
+          if (this.updateCall !== null) {
+            cancelAnimationFrame(this.updateCall);
+          }
+
+          this.event = {
+            clientX: posX + this.left,
+            clientY: posY + this.top,
+          };
+
+          this.updateCall = requestAnimationFrame(this.updateBind);
+        }
+
+        onMouseEnter() {
+          this.updateElementPosition();
+          this.element.style.willChange = "transform";
+          this.setTransition();
+        }
+
+        onMouseMove(event) {
+          if (this.updateCall !== null) {
+            cancelAnimationFrame(this.updateCall);
+          }
+
+          this.event = event;
+          this.updateCall = requestAnimationFrame(this.updateBind);
+        }
+
+        onMouseLeave() {
+          this.setTransition();
+
+          if (this.settings.reset) {
+            requestAnimationFrame(this.resetBind);
+          }
+        }
+
+        reset() {
+          this.onMouseEnter();
+
+          if (this.fullPageListening) {
+            this.event = {
+              clientX: (this.settings.startX + this.settings.max) / (2 * this.settings.max) * this.clientWidth,
+              clientY: (this.settings.startY + this.settings.max) / (2 * this.settings.max) * this.clientHeight
+            };
+          } else {
+            this.event = {
+              clientX: this.left + ((this.settings.startX + this.settings.max) / (2 * this.settings.max) * this.width),
+              clientY: this.top + ((this.settings.startY + this.settings.max) / (2 * this.settings.max) * this.height)
+            };
+          }
+
+          let backupScale = this.settings.scale;
+          this.settings.scale = 1;
+          this.update();
+          this.settings.scale = backupScale;
+          this.resetGlare();
+        }
+
+        resetGlare() {
+          if (this.glare) {
+            this.glareElement.style.transform = "rotate(180deg) translate(-50%, -50%)";
+            this.glareElement.style.opacity = "0";
+          }
+        }
+
+        getValues() {
+          let x, y;
+
+          if (this.fullPageListening) {
+            x = this.event.clientX / this.clientWidth;
+            y = this.event.clientY / this.clientHeight;
+          } else {
+            x = (this.event.clientX - this.left) / this.width;
+            y = (this.event.clientY - this.top) / this.height;
+          }
+
+          x = Math.min(Math.max(x, 0), 1);
+          y = Math.min(Math.max(y, 0), 1);
+
+          let tiltX = (this.reverse * (this.settings.max - x * this.settings.max * 2)).toFixed(2);
+          let tiltY = (this.reverse * (y * this.settings.max * 2 - this.settings.max)).toFixed(2);
+          let angle = Math.atan2(this.event.clientX - (this.left + this.width / 2), -(this.event.clientY - (this.top + this.height / 2))) * (180 / Math.PI);
+
+          return {
+            tiltX: tiltX,
+            tiltY: tiltY,
+            percentageX: x * 100,
+            percentageY: y * 100,
+            angle: angle
+          };
+        }
+
+        updateElementPosition() {
+          let rect = this.element.getBoundingClientRect();
+
+          this.width = this.element.offsetWidth;
+          this.height = this.element.offsetHeight;
+          this.left = rect.left;
+          this.top = rect.top;
+        }
+
+        update() {
+          let values = this.getValues();
+
+          this.element.style.transform = "perspective(" + this.settings.perspective + "px) " +
+            "rotateX(" + (this.settings.axis === "x" ? 0 : values.tiltY) + "deg) " +
+            "rotateY(" + (this.settings.axis === "y" ? 0 : values.tiltX) + "deg) " +
+            "scale3d(" + this.settings.scale + ", " + this.settings.scale + ", " + this.settings.scale + ")";
+
+          if (this.glare) {
+            this.glareElement.style.transform = `rotate(${values.angle}deg) translate(-50%, -50%)`;
+            this.glareElement.style.opacity = `${values.percentageY * this.settings["max-glare"] / 100}`;
+          }
+
+          this.element.dispatchEvent(new CustomEvent("tiltChange", {
+            "detail": values
+          }));
+
+          this.updateCall = null;
+        }
+
+        prepareGlare() {
+          if (!this.glarePrerender) {
+            const jsTiltGlare = document.createElement("div");
+            jsTiltGlare.classList.add("js-tilt-glare");
+
+            const jsTiltGlareInner = document.createElement("div");
+            jsTiltGlareInner.classList.add("js-tilt-glare-inner");
+
+            jsTiltGlare.appendChild(jsTiltGlareInner);
+            this.element.appendChild(jsTiltGlare);
+          }
+
+          this.glareElementWrapper = this.element.querySelector(".js-tilt-glare");
+          this.glareElement = this.element.querySelector(".js-tilt-glare-inner");
+
+          if (this.glarePrerender) {
+            return;
+          }
+
+          Object.assign(this.glareElementWrapper.style, {
+            "position": "absolute",
+            "top": "0",
+            "left": "0",
+            "width": "100%",
+            "height": "100%",
+            "overflow": "hidden",
+            "pointer-events": "none",
+            "border-radius": "inherit"
+          });
+
+          Object.assign(this.glareElement.style, {
+            "position": "absolute",
+            "top": "50%",
+            "left": "50%",
+            "pointer-events": "none",
+            "background-image": `linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%)`,
+            "transform": "rotate(180deg) translate(-50%, -50%)",
+            "transform-origin": "0% 0%",
+            "opacity": "0"
+          });
+
+          this.updateGlareSize();
+        }
+
+        updateGlareSize() {
+          if (this.glare) {
+            const glareSize = (this.element.offsetWidth > this.element.offsetHeight ? this.element.offsetWidth : this.element.offsetHeight) * 2;
+
+            Object.assign(this.glareElement.style, {
+              "width": `${glareSize}px`,
+              "height": `${glareSize}px`,
+            });
+          }
+        }
+
+        updateClientSize() {
+          this.clientWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+          this.clientHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+        }
+
+        onWindowResize() {
+          this.updateGlareSize();
           this.updateClientSize();
         }
 
-        this.addEventListeners();
-        this.reset();
+        setTransition() {
+          clearTimeout(this.transitionTimeout);
+          this.element.style.transition = this.settings.speed + "ms " + this.settings.easing;
+          if (this.glare) this.glareElement.style.transition = `opacity ${this.settings.speed}ms ${this.settings.easing}`;
 
-        if (this.resetToStart === false) {
-          this.settings.startX = 0;
-          this.settings.startY = 0;
-        }
-      }
-
-      static isSettingTrue(setting) {
-        return setting === "" || setting === true || setting === 1;
-      }
-
-      getElementListener() {
-        if (this.fullPageListening) {
-          return window.document;
+          this.transitionTimeout = setTimeout(() => {
+            this.element.style.transition = "";
+            if (this.glare) {
+              this.glareElement.style.transition = "";
+            }
+          }, this.settings.speed);
         }
 
-        if (typeof this.settings["mouse-event-element"] === "string") {
-          const mouseEventElement = document.querySelector(this.settings["mouse-event-element"]);
+        extendSettings(settings) {
+          let defaultSettings = {
+            reverse: false,
+            max: 15,
+            startX: 0,
+            startY: 0,
+            perspective: 1000,
+            easing: "cubic-bezier(.03,.98,.52,.99)",
+            scale: 1,
+            speed: 300,
+            transition: true,
+            axis: null,
+            glare: false,
+            "max-glare": 1,
+            "glare-prerender": false,
+            "full-page-listening": false,
+            "mouse-event-element": null,
+            reset: true,
+            "reset-to-start": true,
+            gyroscope: true,
+            gyroscopeMinAngleX: -45,
+            gyroscopeMaxAngleX: 45,
+            gyroscopeMinAngleY: -45,
+            gyroscopeMaxAngleY: 45,
+            gyroscopeSamples: 10
+          };
 
-          if (mouseEventElement) {
-            return mouseEventElement;
-          }
-        }
-
-        if (this.settings["mouse-event-element"] instanceof Node) {
-          return this.settings["mouse-event-element"];
-        }
-
-        return this.element;
-      }
-
-      addEventListeners() {
-        this.onMouseEnterBind = this.onMouseEnter.bind(this);
-        this.onMouseMoveBind = this.onMouseMove.bind(this);
-        this.onMouseLeaveBind = this.onMouseLeave.bind(this);
-        this.onWindowResizeBind = this.onWindowResize.bind(this);
-        this.onDeviceOrientationBind = this.onDeviceOrientation.bind(this);
-
-        this.elementListener.addEventListener("mouseenter", this.onMouseEnterBind);
-        this.elementListener.addEventListener("mouseleave", this.onMouseLeaveBind);
-        this.elementListener.addEventListener("mousemove", this.onMouseMoveBind);
-
-        if (this.glare || this.fullPageListening) {
-          window.addEventListener("resize", this.onWindowResizeBind);
-        }
-
-        if (this.gyroscope) {
-          window.addEventListener("deviceorientation", this.onDeviceOrientationBind);
-        }
-      }
-
-      removeEventListeners() {
-        this.elementListener.removeEventListener("mouseenter", this.onMouseEnterBind);
-        this.elementListener.removeEventListener("mouseleave", this.onMouseLeaveBind);
-        this.elementListener.removeEventListener("mousemove", this.onMouseMoveBind);
-
-        if (this.gyroscope) {
-          window.removeEventListener("deviceorientation", this.onDeviceOrientationBind);
-        }
-
-        if (this.glare || this.fullPageListening) {
-          window.removeEventListener("resize", this.onWindowResizeBind);
-        }
-      }
-
-      destroy() {
-        clearTimeout(this.transitionTimeout);
-        if (this.updateCall !== null) {
-          cancelAnimationFrame(this.updateCall);
-        }
-
-        this.element.style.willChange = "";
-        this.element.style.transition = "";
-        this.element.style.transform = "";
-        this.resetGlare();
-
-        this.removeEventListeners();
-        this.element.vanillaTilt = null;
-        delete this.element.vanillaTilt;
-
-        this.element = null;
-      }
-
-      onDeviceOrientation(event) {
-        if (event.gamma === null || event.beta === null) {
-          return;
-        }
-
-        this.updateElementPosition();
-
-        if (this.gyroscopeSamples > 0) {
-          this.lastgammazero = this.gammazero;
-          this.lastbetazero = this.betazero;
-
-          if (this.gammazero === null) {
-            this.gammazero = event.gamma;
-            this.betazero = event.beta;
-          } else {
-            this.gammazero = (event.gamma + this.lastgammazero) / 2;
-            this.betazero = (event.beta + this.lastbetazero) / 2;
+          let newSettings = {};
+          for (var property in defaultSettings) {
+            if (property in settings) {
+              newSettings[property] = settings[property];
+            } else if (this.element.hasAttribute("data-tilt-" + property)) {
+              let attribute = this.element.getAttribute("data-tilt-" + property);
+              try {
+                newSettings[property] = JSON.parse(attribute);
+              } catch (e) {
+                newSettings[property] = attribute;
+              }
+            } else {
+              newSettings[property] = defaultSettings[property];
+            }
           }
 
-          this.gyroscopeSamples -= 1;
+          return newSettings;
         }
 
-        const totalAngleX = this.settings.gyroscopeMaxAngleX - this.settings.gyroscopeMinAngleX;
-        const totalAngleY = this.settings.gyroscopeMaxAngleY - this.settings.gyroscopeMinAngleY;
+        static init(elements, settings) {
+          if (elements instanceof Node) {
+            elements = [elements];
+          }
 
-        const degreesPerPixelX = totalAngleX / this.width;
-        const degreesPerPixelY = totalAngleY / this.height;
+          if (elements instanceof NodeList) {
+            elements = [].slice.call(elements);
+          }
 
-        const angleX = event.gamma - (this.settings.gyroscopeMinAngleX + this.gammazero);
-        const angleY = event.beta - (this.settings.gyroscopeMinAngleY + this.betazero);
+          if (!(elements instanceof Array)) {
+            return;
+          }
 
-        const posX = angleX / degreesPerPixelX;
-        const posY = angleY / degreesPerPixelY;
-
-        if (this.updateCall !== null) {
-          cancelAnimationFrame(this.updateCall);
-        }
-
-        this.event = {
-          clientX: posX + this.left,
-          clientY: posY + this.top,
-        };
-
-        this.updateCall = requestAnimationFrame(this.updateBind);
-      }
-
-      onMouseEnter() {
-        this.updateElementPosition();
-        this.element.style.willChange = "transform";
-        this.setTransition();
-      }
-
-      onMouseMove(event) {
-        if (this.updateCall !== null) {
-          cancelAnimationFrame(this.updateCall);
-        }
-
-        this.event = event;
-        this.updateCall = requestAnimationFrame(this.updateBind);
-      }
-
-      onMouseLeave() {
-        this.setTransition();
-
-        if (this.settings.reset) {
-          requestAnimationFrame(this.resetBind);
-        }
-      }
-
-      reset() {
-        this.onMouseEnter();
-
-        if (this.fullPageListening) {
-          this.event = {
-            clientX: (this.settings.startX + this.settings.max) / (2 * this.settings.max) * this.clientWidth,
-            clientY: (this.settings.startY + this.settings.max) / (2 * this.settings.max) * this.clientHeight
-          };
-        } else {
-          this.event = {
-            clientX: this.left + ((this.settings.startX + this.settings.max) / (2 * this.settings.max) * this.width),
-            clientY: this.top + ((this.settings.startY + this.settings.max) / (2 * this.settings.max) * this.height)
-          };
-        }
-
-        let backupScale = this.settings.scale;
-        this.settings.scale = 1;
-        this.update();
-        this.settings.scale = backupScale;
-        this.resetGlare();
-      }
-
-      resetGlare() {
-        if (this.glare) {
-          this.glareElement.style.transform = "rotate(180deg) translate(-50%, -50%)";
-          this.glareElement.style.opacity = "0";
-        }
-      }
-
-      getValues() {
-        let x, y;
-
-        if (this.fullPageListening) {
-          x = this.event.clientX / this.clientWidth;
-          y = this.event.clientY / this.clientHeight;
-        } else {
-          x = (this.event.clientX - this.left) / this.width;
-          y = (this.event.clientY - this.top) / this.height;
-        }
-
-        x = Math.min(Math.max(x, 0), 1);
-        y = Math.min(Math.max(y, 0), 1);
-
-        let tiltX = (this.reverse * (this.settings.max - x * this.settings.max * 2)).toFixed(2);
-        let tiltY = (this.reverse * (y * this.settings.max * 2 - this.settings.max)).toFixed(2);
-        let angle = Math.atan2(this.event.clientX - (this.left + this.width / 2), -(this.event.clientY - (this.top + this.height / 2))) * (180 / Math.PI);
-
-        return {
-          tiltX: tiltX,
-          tiltY: tiltY,
-          percentageX: x * 100,
-          percentageY: y * 100,
-          angle: angle
-        };
-      }
-
-      updateElementPosition() {
-        let rect = this.element.getBoundingClientRect();
-
-        this.width = this.element.offsetWidth;
-        this.height = this.element.offsetHeight;
-        this.left = rect.left;
-        this.top = rect.top;
-      }
-
-      update() {
-        let values = this.getValues();
-
-        this.element.style.transform = "perspective(" + this.settings.perspective + "px) " +
-          "rotateX(" + (this.settings.axis === "x" ? 0 : values.tiltY) + "deg) " +
-          "rotateY(" + (this.settings.axis === "y" ? 0 : values.tiltX) + "deg) " +
-          "scale3d(" + this.settings.scale + ", " + this.settings.scale + ", " + this.settings.scale + ")";
-
-        if (this.glare) {
-          this.glareElement.style.transform = `rotate(${values.angle}deg) translate(-50%, -50%)`;
-          this.glareElement.style.opacity = `${values.percentageY * this.settings["max-glare"] / 100}`;
-        }
-
-        this.element.dispatchEvent(new CustomEvent("tiltChange", {
-          "detail": values
-        }));
-
-        this.updateCall = null;
-      }
-
-      prepareGlare() {
-        if (!this.glarePrerender) {
-          const jsTiltGlare = document.createElement("div");
-          jsTiltGlare.classList.add("js-tilt-glare");
-
-          const jsTiltGlareInner = document.createElement("div");
-          jsTiltGlareInner.classList.add("js-tilt-glare-inner");
-
-          jsTiltGlare.appendChild(jsTiltGlareInner);
-          this.element.appendChild(jsTiltGlare);
-        }
-
-        this.glareElementWrapper = this.element.querySelector(".js-tilt-glare");
-        this.glareElement = this.element.querySelector(".js-tilt-glare-inner");
-
-        if (this.glarePrerender) {
-          return;
-        }
-
-        Object.assign(this.glareElementWrapper.style, {
-          "position": "absolute",
-          "top": "0",
-          "left": "0",
-          "width": "100%",
-          "height": "100%",
-          "overflow": "hidden",
-          "pointer-events": "none",
-          "border-radius": "inherit"
-        });
-
-        Object.assign(this.glareElement.style, {
-          "position": "absolute",
-          "top": "50%",
-          "left": "50%",
-          "pointer-events": "none",
-          "background-image": `linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%)`,
-          "transform": "rotate(180deg) translate(-50%, -50%)",
-          "transform-origin": "0% 0%",
-          "opacity": "0"
-        });
-
-        this.updateGlareSize();
-      }
-
-      updateGlareSize() {
-        if (this.glare) {
-          const glareSize = (this.element.offsetWidth > this.element.offsetHeight ? this.element.offsetWidth : this.element.offsetHeight) * 2;
-
-          Object.assign(this.glareElement.style, {
-            "width": `${glareSize}px`,
-            "height": `${glareSize}px`,
+          elements.forEach((element) => {
+            if (!("vanillaTilt" in element)) {
+              element.vanillaTilt = new VanillaTilt(element, settings);
+            }
           });
         }
       }
 
-      updateClientSize() {
-        this.clientWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-        this.clientHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+      if (typeof document !== "undefined") {
+        window.VanillaTilt = VanillaTilt;
+
+        VanillaTilt.init(document.querySelectorAll("[data-tilt]"));
       }
 
-      onWindowResize() {
-        this.updateGlareSize();
-        this.updateClientSize();
-      }
-
-      setTransition() {
-        clearTimeout(this.transitionTimeout);
-        this.element.style.transition = this.settings.speed + "ms " + this.settings.easing;
-        if (this.glare) this.glareElement.style.transition = `opacity ${this.settings.speed}ms ${this.settings.easing}`;
-
-        this.transitionTimeout = setTimeout(() => {
-          this.element.style.transition = "";
-          if (this.glare) {
-            this.glareElement.style.transition = "";
-          }
-        }, this.settings.speed);
-      }
-
-      extendSettings(settings) {
-        let defaultSettings = {
-          reverse: false,
-          max: 15,
-          startX: 0,
-          startY: 0,
-          perspective: 1000,
-          easing: "cubic-bezier(.03,.98,.52,.99)",
-          scale: 1,
-          speed: 300,
-          transition: true,
-          axis: null,
-          glare: false,
-          "max-glare": 1,
-          "glare-prerender": false,
-          "full-page-listening": false,
-          "mouse-event-element": null,
-          reset: true,
-          "reset-to-start": true,
-          gyroscope: true,
-          gyroscopeMinAngleX: -45,
-          gyroscopeMaxAngleX: 45,
-          gyroscopeMinAngleY: -45,
-          gyroscopeMaxAngleY: 45,
-          gyroscopeSamples: 10
-        };
-
-        let newSettings = {};
-        for (var property in defaultSettings) {
-          if (property in settings) {
-            newSettings[property] = settings[property];
-          } else if (this.element.hasAttribute("data-tilt-" + property)) {
-            let attribute = this.element.getAttribute("data-tilt-" + property);
-            try {
-              newSettings[property] = JSON.parse(attribute);
-            } catch (e) {
-              newSettings[property] = attribute;
-            }
-          } else {
-            newSettings[property] = defaultSettings[property];
-          }
-        }
-
-        return newSettings;
-      }
-
-      static init(elements, settings) {
-        if (elements instanceof Node) {
-          elements = [elements];
-        }
-
-        if (elements instanceof NodeList) {
-          elements = [].slice.call(elements);
-        }
-
-        if (!(elements instanceof Array)) {
-          return;
-        }
-
-        elements.forEach((element) => {
-          if (!("vanillaTilt" in element)) {
-            element.vanillaTilt = new VanillaTilt(element, settings);
-          }
-        });
-      }
-    }
-
-    if (typeof document !== "undefined") {
-      window.VanillaTilt = VanillaTilt;
-
-      VanillaTilt.init(document.querySelectorAll("[data-tilt]"));
-    }
-
-    return VanillaTilt;
+      return VanillaTilt;
 
     }());
   </script>
@@ -679,5 +772,57 @@
       document.getElementById('mobileMenu').classList.toggle('hidden');
     });
   </script>
+  <script>
+    const navMenu = document.getElementById('navMenu');
+    const navLinks = navMenu.querySelectorAll('.nav-link');
+    const indicator = document.getElementById('navIndicator');
+    const sections = [...navLinks].map(link =>
+      document.querySelector(link.getAttribute('href'))
+    );
+
+    let activeLink = navLinks[0];
+    let hoveredLink = null;
+
+    function moveIndicator(target) {
+      if (!target) return;
+
+      indicator.style.width = `${target.offsetWidth}px`;
+      indicator.style.transform = `translateX(${target.offsetLeft}px)`;
+    }
+
+    // Hover behavior
+    navLinks.forEach(link => {
+      link.addEventListener('mouseenter', () => {
+        hoveredLink = link;
+        moveIndicator(link);
+      });
+    });
+
+    navMenu.addEventListener('mouseleave', () => {
+      hoveredLink = null;
+      moveIndicator(activeLink);
+    });
+
+    // Scroll sync (authoritative)
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const index = sections.indexOf(entry.target);
+          activeLink = navLinks[index];
+          if (!hoveredLink) moveIndicator(activeLink);
+        }
+      });
+    }, { threshold: 0.6 });
+
+    sections.forEach(section => observer.observe(section));
+
+    window.addEventListener('load', () => moveIndicator(activeLink));
+    window.addEventListener('resize', () =>
+      moveIndicator(hoveredLink || activeLink)
+    );
+  </script>
+
+
 </body>
+
 </html>
